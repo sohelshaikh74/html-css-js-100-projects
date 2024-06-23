@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: crimson;
+}
+.clipboard{
+    margin: 20px;
+    padding: 20px;
+}
+.clip{
+    background: white;
+    width: 700px;
+    height: 250px;
+    margin: 20px;
+    
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+    border-radius: 100px;
+}

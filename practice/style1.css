@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: linear-gradient(#000176,#310757);
+    /* background: radial-gradient(#310757,#000176); */
+}
+
+#container{
+    /* height: 300px; */
+    height: 100vh;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box{
+    background: #fff;
+    margin: 20px;
+    line-height: 20px;
+    height: 130px;
+    border: 2px solid black;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 50px;
+}

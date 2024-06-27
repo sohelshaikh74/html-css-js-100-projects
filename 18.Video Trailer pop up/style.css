@@ -13,9 +13,29 @@
    position: relative;
 }
 
-.btn{
+img{
     position: absolute;
-    width: 65px;
-    bottom: 10px;
-    right: 30px;
+    width: 100px;
+    bottom: 20px;
+    right: 50px;
+    cursor: pointer;
+    animation: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    50%{
+        transform: translateY(-20px);
+        animation-timing-function: ease-in;
+    }
+    100%{
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
 }

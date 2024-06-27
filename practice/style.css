@@ -6,7 +6,28 @@
 }
 
 body{
-    background: crimson;
+    /* background: crimson; */
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background: #000;
+    color: #fff;
+    margin: 20px;
+    padding: 50px;
+    border: 2px dashed green;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: linear-gradient(#00DBDE,#FC00FF);
 }

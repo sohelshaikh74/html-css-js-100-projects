@@ -11,6 +11,7 @@
     --primary-label:#000;
     --white-ball:#fff;
     --black-ball:#000;
+    --secondary-label:#fff;
 }
 
 body{
@@ -58,7 +59,11 @@ label::after{
     transform: translateX(-100%);
 }
 
+#switch:checked +  label {
+    background-color: var(--secondary-label);
+}
+
 label:active:after{
     width: 60px;
-    
+
 }

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* custome scroll bar */
+::-webkit-scrollbar{
+    background: transparent;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: linear-gradient(#343434,#fff);
+    height: 2px;
+}
+
+.box{
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+
+
+/*  */
+
+.scroll-indicator{
+    height: 5px;
+    width: calc(100% - 6em);
+    top: 10px;
+    left: 3em;
+    border-radius: 3px;
+    position: fixed;
+}
+
+
+.scroll-indicator .progress{
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    transition: width 0.1s;
+    background: linear-gradient(30deg, #21d4fd,#b721ff);
+}

@@ -3,78 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Background Image</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        width: 80%;
+        margin: 50px auto;
+      }
+      .container {
+        width: 700px;
+        height: 34vh;
+        background: url("./images/blog_banner_image.png") no-repeat;
+        background-size: contain;
+        border-radius: 8px;
+        padding: 12px 30px;
+      }
+      .content h2 {
+        font-size: max(1.7vw, 22px);
+        margin-bottom: 20px;
+      }
+      .content p {
+        font-size: 18px;
+      }
+      .content button {
+        margin-top: 10px;
+        border: none;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 50px;
+        background: #f353;
+      }
+    </style>
   </head>
   <body>
-    <div class="content">
-      <section>
-        <h1>Title</h1>
+    <div class="container">
+      <div class="content">
+        <h2>Order for Delicious Product</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam,
+          autem. Sapiente sit explicabo suscipit hic soluta, corrupti fugiat
+          veritatis vel pariatur obcaecati ipsum!
         </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
-      <section>
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          quibusdam adipisci non accusantium aperiam beatae harum nisi!
-          Assumenda maiores voluptatum est dolorum cum ut, corrupti esse
-          veritatis consequuntur totam quibusdam!
-        </p>
-      </section>
+        <button>View More</button>
+      </div>
     </div>
-    <div class="scroll-indicator">
-      <div class="progress"></div>
-    </div>
-    <script src="app.js"></script>
   </body>
 </html>

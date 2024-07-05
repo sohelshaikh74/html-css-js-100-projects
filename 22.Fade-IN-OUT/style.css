@@ -92,3 +92,12 @@
     opacity: 0;
     transition: 1s all ease-out;
   }
+
+
+  body{
+  background: linear-gradient(#11D0E1,#9482fb);
+  background:  rgba(3, 31, 66, 0.4);
+
+  
+
+  }

@@ -52,9 +52,47 @@ body{
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     height: 4px;
     width: 0%;
     z-index: -1;
     transform: 0.4s ease;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--secondary-color);
+    transition: 0.4s ease;
+}
+
+.circle.active{
+    border-color: var(--primary-color);
+}
+
+.btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:disabled{
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
 }

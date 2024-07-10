@@ -3,54 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Background Image</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-      }
-      body {
-        width: 80%;
-        margin: 50px auto;
-      }
-      .container {
-        width: 700px;
-        height: 34vh;
-        background: url("./images/blog_banner_image.png") no-repeat;
-        background-size: contain;
-        border-radius: 8px;
-        padding: 12px 30px;
-      }
-      .content h2 {
-        font-size: max(1.7vw, 22px);
-        margin-bottom: 20px;
-      }
-      .content p {
-        font-size: 18px;
-      }
-      .content button {
-        margin-top: 10px;
-        border: none;
-        padding: 20px;
-        font-size: 16px;
-        border-radius: 50px;
-        background: #f353;
-      }
-    </style>
+    <title>Form Popup</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <h2>Order for Delicious Product</h2>
+    <header>
+      <div class="header-content">
+        <h1>Welcome To The Real World</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam,
-          autem. Sapiente sit explicabo suscipit hic soluta, corrupti fugiat
-          veritatis vel pariatur obcaecati ipsum!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+          officiis quo asperiores at deleniti explicabo blanditiis iste delectus
+          impedit, corporis ad ab voluptas?
         </p>
-        <button>View More</button>
+        <button class="cta-btn">Sign up</button>
       </div>
-    </div>
+    </header>
+    <section class="modal-container" id="modal">
+      <section class="modal">
+        <button class="close-btn" id="close">X</button>
+        <div class="modal-content">
+          <h1>Sign Up</h1>
+          <form class="modal-form">
+            <div>
+              <label for="">Name</label>
+              <input type="text" placeholder="Enter Name" />
+            </div>
+            <div>
+              <label for="">Email</label>
+              <input type="email" placeholder="Email Address" />
+            </div>
+            <div>
+              <label for="">Password</label>
+              <input type="password" placeholder="password" />
+            </div>
+            <div>
+              <label for="">Confirm Password</label>
+              <input type="password" placeholder="password" />
+            </div>
+            <input type="submit" class="submit-btn" />
+          </form>
+        </div>
+      </section>
+    </section>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -36,3 +36,44 @@ form .form-control{
     margin: 20px auto 40px;
     width: 300px;
 }
+
+.form-control input{
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #000;
+    /* outline: none; */
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 0px;
+    color: #000;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: crimson;
+}
+
+
+.btn:focus{
+  outline: 0;
+
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+
+/* javascript */
+.form-control label span{
+
+}

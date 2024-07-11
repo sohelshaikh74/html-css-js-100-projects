@@ -3,60 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Popup</title>
+    <title>Practice show and hide</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <h1>Welcome To The Real World</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          officiis quo asperiores at deleniti explicabo blanditiis iste delectus
-          impedit, corporis ad ab voluptas?
-        </p>
-        <button class="cta-btn" id="open">Sign up</button>
+    <div class="container">
+      <input type="text" placeholder="Password" />
+      <div class="eye-container">
+        <i class="fa-solid fa-eye" id="eye-icon"></i>
       </div>
-    </header>
-    <section class="modal-container" id="modal">
-      <section class="modal">
-        <button class="close-btn" id="close">X</button>
-        <div class="modal-content">
-          <h1>Sign Up</h1>
-          <form class="modal-form">
-            <div>
-              <label for="">Name</label>
-              <input type="text" placeholder="Enter Name" class="form-input" />
-            </div>
-            <div>
-              <label for="">Email</label>
-              <input
-                type="email"
-                placeholder="Email Address"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="">Password</label>
-              <input
-                type="password"
-                placeholder="password"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="">Confirm Password</label>
-              <input
-                type="password"
-                placeholder="confirm password"
-                class="form-input"
-              />
-            </div>
-            <input type="submit" value="submit" class="submit-btn" />
-          </form>
-        </div>
-      </section>
-    </section>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,17 +1,8 @@
-const close = document.getElementById('close')
+// input
+let input = document.querySelector('input')
+// eye
+let eyeIcon = document.querySelector('#eye-icon')
 
-const open = document.getElementById('open')
-
-const modal = document.getElementById('modal')
-
-console.log(modal);
-
-open.addEventListener('click',()=>{
-    modal.classList.add('show-modal')
+eyeIcon.addEventListener('click',()=>{
+  input.type==="password"?input.type="text":input.type="password"
 })
-
-close.addEventListener('click',()=>{
-  modal.classList.remove('show-modal')
-})
-
-window.addEventListener('click',(e)=>e.target===modal?modal.classList.remove('show-modal'):false)

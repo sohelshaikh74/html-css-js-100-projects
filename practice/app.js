@@ -1,8 +1,17 @@
-let indicator = document.querySelector('.scroll-indicator')
-let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+const close = document.getElementById('close')
 
-window.addEventListener('scroll',()=>{
-    let scrollTop = document.documentElement.scrollTop
-    let scrolled = (scrollTop/scrollHeight)*100
-    indicator.style.width=`${scrolled}%`
+const open = document.getElementById('open')
+
+const modal = document.getElementById('modal')
+
+console.log(modal);
+
+open.addEventListener('click',()=>{
+    modal.classList.add('show-modal')
 })
+
+close.addEventListener('click',()=>{
+  modal.classList.remove('show-modal')
+})
+
+window.addEventListener('click',(e)=>e.target===modal?modal.classList.remove('show-modal'):false)

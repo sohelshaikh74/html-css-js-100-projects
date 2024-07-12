@@ -72,6 +72,6 @@ header{
 
 }
 
-.rotate{
+.rotate {
     transform: rotate(180deg);
-}
+  }

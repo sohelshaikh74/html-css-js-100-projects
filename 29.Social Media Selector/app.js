@@ -23,6 +23,14 @@ console.log(arrowIcon);
 
 
 selectField.addEventListener('click',()=>{
-    list.classList.toggle('hide')
-    arrowIcon.classList.toggle('rotate')
+    list.classList.toggle('hide');
+    arrowIcon.classList.toggle('rotate');
 })
+
+for(option of options){
+    option.onclick = function(){
+        selectText.innerHTML = this.textContent
+        list.classList.toggle('hide');
+        arrowIcon.classList.toggle('rotate');
+    }
+}

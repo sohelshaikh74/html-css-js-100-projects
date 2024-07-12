@@ -3,6 +3,7 @@
     padding: 0;
     /* box-sizing: border-box; */
     font-family: sans-serif;
+    color: #000;
 }
 
 header{
@@ -47,6 +48,9 @@ header{
 .options {
     width: 100%;
     position: relative;
+    padding: 15px 0 15px 70px;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 .options img{
@@ -54,4 +58,20 @@ header{
     position: absolute;
     top: 12px;
     left: 25px;
+}
+
+.options:hover{
+    background: rgba(255,255,255,0.7);
+}
+
+
+/* javascript classes */
+
+.hide{
+    visibility: hidden;
+
+}
+
+.rotate{
+    transform: rotate(180deg);
 }

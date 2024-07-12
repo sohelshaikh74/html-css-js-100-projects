@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: sans-serif;
 }
 
@@ -15,22 +15,31 @@ header{
 }
 
 #selector{
-    width: 350px;
+    width: 750px;
 }
 
 #selectField{
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 30px;
-    background: rgba(255,255,255,0.5);
-    box-sizing: border-box;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+   width: 100%;
+   padding: 15px 20px;
+   margin-bottom: 30px;
+   box-sizing: border-box;
+   background: rgba(255,255,255,0.5);
+   border-radius: 6px;
+   display: flex;
+   gap: 160px ;
+   align-items: center;
+   cursor: pointer;
 }
 
 #selectField img{
   width: 12px;
   transition: trasnform 0.5s;
+}
+
+
+#list{
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    border-radius: 6px;
+    overflow: hidden;
 }

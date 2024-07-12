@@ -1,7 +1,10 @@
-let allLabels = document.querySelectorAll('.form-control label')
 
-allLabels.forEach(label=>{
-    label.innerHTML = label.innerHTML.split("").map((letter,index)=>
-        `<span style="transition-delay:${index*50}ms">${letter} </span>`
-    ).join("")
-})
+
+const getData=()=>{
+    fetch('https://opentip.kaspersky.com/api/v1/')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+
+

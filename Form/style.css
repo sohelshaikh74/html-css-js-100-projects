@@ -8,11 +8,16 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: green;
+    background: url('./images/form-background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 .container{
     width: 420px;
-    background: purple;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, 0.3);
+    backdrop-filter: blur(4px);
     color: #fff;
     border-radius: 8px;
     padding: 30px 40px;

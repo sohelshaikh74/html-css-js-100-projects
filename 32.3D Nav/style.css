@@ -59,3 +59,17 @@ body{
     top: 75%;
     width: 40%;
 }
+
+.toogle-btn.active span:nth-child(2){
+    display: none;
+}
+
+.toogle-btn.active span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+}
+.toogle-btn.active span:nth-child(3){
+    top: 50%;
+    transform: rotate(-45deg);
+    width: 100%;
+}

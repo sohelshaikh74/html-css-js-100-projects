@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+button{
+    border: none;
+    outline: none;
+}
+body{
+    font-family: sans-serif;
+    background: #000;
+}
+.content{
+    max-width: 1440px;
+    margin: 0 auto;
+    /* background: #fff; */
+    padding: 0 10rem;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.bounter-box{
+    width: 100%;
+    height: 160px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 600;
+    background-color: rgb(43,42,42,0.959);
+    border-radius: 8px;
+}
+
+/* button .increments{} */
+.button{
+    width: 80%;
+    max-width: 350px;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.increments-btn{
+  margin: 2em 0 1em 0; 
+  background-color: rgb(26,26,184);
+  font-weight: bold;
+}
+.save-btn{
+    background-color: #00da7f;
+    font-weight: bold;
+   
+}
+
+.enteries{
+    margin: 2.5rem 0 1em 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.enteries-field{
+    font-size: 20px;
+    color: #fff;
+    
+}

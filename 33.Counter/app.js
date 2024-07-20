@@ -40,3 +40,15 @@ console.log(saveEle);
 console.log(incrementBtn);
 
 let count = 0;
+incrementBtn.addEventListener('click',()=>{
+    count +=1;
+    countEle.textContent = count
+})
+
+console.log(count);
+saveBtn.addEventListener('click',()=>{
+    let countStr = count +", "
+    saveEle.textContent += countStr
+    count =0;
+    countEle.textContent = count
+})

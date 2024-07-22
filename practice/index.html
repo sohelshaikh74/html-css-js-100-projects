@@ -3,15 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change Browser Background Color</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #000;
+      }
+      .card {
+        position: relative;
+        width: 400px;
+        padding: 20px;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Semi-transparent background for text readability */
+        border-radius: 10px;
+        overflow: hidden; /* Ensure the text container doesn't overflow */
+        color: white;
+        font-family: Arial, sans-serif;
+        transition: background 0.3s ease-in-out; /* Smooth transition for background blur */
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./images/form-background.jpg") no-repeat center
+          center/cover;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for opacity and blur effect */
+        z-index: -1; /* Place the image behind the text */
+      }
+      .card:hover::before {
+        opacity: 1; /* Show the background image on hover */
+        filter: blur(8px); /* Apply blur effect on hover */
+        font-weight: bold;
+        color: red;
+      }
+      .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+      }
+      .card p {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+      .card a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+    <title>Blurred Background Card on Hover</title>
   </head>
   <body>
-    <div id="container">
-      <h1>Change Browser Background Color</h1>
-      <button id="changeColorBtn">Change Color</button>
+    <div class="card">
+      <h2>2. Why Ethical Hacking is Important for Cybersecurity</h2>
+      <p>
+        Understand why ethical hacking is important for cybersecurity. Learn how
+        ethical hackers protect organizations from cyber threats.
+      </p>
+      <a href="#">Read more →</a>
     </div>
-
-    <script src="app.js"></script>
   </body>
 </html>

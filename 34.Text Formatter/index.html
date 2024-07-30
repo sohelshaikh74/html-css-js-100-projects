@@ -8,16 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <div class="show-output">
-        <h4 id="output"></h4>
+      <div class="input-container">
+        <h2>Type In Your Words</h2>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="Type Your Text Here... "
+        />
       </div>
-      <div class="user-input">
-        <input type="text" placeholder="enter text" id="text-input" />
-        <div class="btn">
-          <button id="capital">ABC</button>
-          <button id="small">abc</button>
-        </div>
+      <div class="btns-container">
+        <button class="btn uppercase">ABC</button>
+        <button class="btn lowercase">abc</button>
+        <button class="btn capitalize">Abc</button>
+        <button class="btn italic">Italic</button>
+        <button class="btn bold">Bold</button>
+        <button class="btn underline">ABC</button>
       </div>
+      <p id="output-field">Output</p>
     </div>
     <script src="app.js"></script>
   </body>

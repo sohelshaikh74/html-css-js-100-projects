@@ -3,28 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Profile Carousel</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .containerr {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      text-align: center;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .profile .before,
+    .profile .after {
+      width: 20%;
+    }
+
+    .profile .main {
+      width: 50%;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .profile .hike {
+      background-color: #00b894;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .navigation {
+      margin-top: 10px;
+    }
+
+    .navigation button {
+      background-color: #ddd;
+      border: none;
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .career-btn {
+      background-color: #d63031;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .company-logo img {
+      width: 80px;
+      height: auto;
+    }
+  </style>
   <body>
-    <div class="center">
-      <button id="show-login">Login</button>
-    </div>
-    <div class="popup">
-      <div class="close-btn">&times;</div>
-      <div class="form">
-        <div class="column form">
-          <h2>Enquire Now</h2>
-          <iframe
-            height="400"
-            width="500px"
-            src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf"
-            frameborder="0"
-            sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"
-          ></iframe>
+    <div class="container">
+      <div class="profile">
+        <div class="before">
+          <h3>BEFORE</h3>
+          <div class="company-logo">
+            <img src="  " alt="Tech Mahindra" />
+          </div>
+          <p>Software Engineer</p>
+        </div>
+        <div class="main">
+          <img id="profile-pic" src="mohit-singh.png" alt="Profile Picture" />
+          <h2 id="name">Mohit Singh</h2>
+          <p id="details">EPGP in Data Science from IIITB 2019</p>
+          <div class="hike">60% Hike</div>
+          <div class="navigation">
+            <button id="prev-btn">&lt;</button>
+            <span id="counter">3/4</span>
+            <button id="next-btn">&gt;</button>
+          </div>
+          <button id="career-btn" class="career-btn">
+            Talk to a Career Expert
+          </button>
+        </div>
+        <div class="after">
+          <h3>AFTER</h3>
+          <div class="company-logo">
+            <img src="wipro-logo.png" alt="Wipro" />
+          </div>
+          <p>Data Scientist</p>
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script>
+      const profiles = [
+        {
+          name: "Mohit Singh",
+          details: "EPGP in Data Science from IIITB 2019",
+          pic: "mohit-singh.png",
+          before: "Tech Mahindra",
+          beforeRole: "Software Engineer",
+          after: "Wipro",
+          afterRole: "Data Scientist",
+          hike: "60% Hike",
+        },
+        {
+          name: "Anjali Sharma",
+          details: "MBA from IIM Bangalore 2018",
+          pic: "anjali-sharma.png",
+          before: "Infosys",
+          beforeRole: "Business Analyst",
+          after: "Amazon",
+          afterRole: "Product Manager",
+          hike: "50% Hike",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      document.getElementById("prev-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + profiles.length) % profiles.length;
+        updateProfile();
+      });
+
+      document.getElementById("next-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % profiles.length;
+        updateProfile();
+      });
+
+      function updateProfile() {
+        const profile = profiles[currentIndex];
+        document.getElementById("profile-pic").src = profile.pic;
+        document.getElementById("name").innerText = profile.name;
+        document.getElementById("details").innerText = profile.details;
+        document.querySelector(".before p").innerText = profile.beforeRole;
+        document.querySelector(".before img").src = `${profile.before
+          .toLowerCase()
+          .replace(" ", "-")}-logo.png`;
+        document.querySelector(".after p").innerText = profile.afterRole;
+        document.querySelector(".after img").src = `${profile.after
+          .toLowerCase()
+          .replace(" ", "-")}-logo.png`;
+        document.querySelector(".hike").innerText = profile.hike;
+        document.getElementById("counter").innerText = `${currentIndex + 1}/${
+          profiles.length
+        }`;
+      }
+
+      updateProfile();
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>

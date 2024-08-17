@@ -3,42 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation using after and before</title>
+    <title>Filter(drop-shaodow)</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: sans-serif;
       }
       body {
-        height: 100vh;
-        background-color: #3fefef;
+        /* height: 100vh; */
+        background: #000;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hi;
       }
-      h1 {
-        text-transform: uppercase;
-        font-size: 36px;
-        font-weight: 700;
-        position: relative;
-      }
-      h1::after {
-        content: "";
+      .container {
         position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 3px;
-        width: 0%;
-        background: #fff;
-        transition: all ease-in-out 1s;
+        top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 2px solid #00bfe7;
+        border-radius: 8px;
+        padding: 20px 10px 0;
+        flex-wrap: wrap;
+        color: #fff;
       }
-      h1:hover::after {
-        width: 100%;
+      .container img {
+        filter: drop-shadow(1px 1px 10px #00bfe7);
       }
     </style>
   </head>
   <body>
-    <h1>Sohel</h1>
+    <div class="container">
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quaerat
+        at adipisci.
+      </h1>
+      <img src="/images/sohel-without-bg.png" alt="" />
+    </div>
   </body>
 </html>

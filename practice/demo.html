@@ -17,6 +17,25 @@
         align-items: center;
         justify-content: center;
       }
+      h1 {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 700;
+        position: relative;
+      }
+      h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0%;
+        background: #fff;
+        transition: all ease-in-out 1s;
+      }
+      h1:hover::after {
+        width: 100%;
+      }
     </style>
   </head>
   <body>

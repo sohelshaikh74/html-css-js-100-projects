@@ -3,43 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horizontal scrolling</title>
+    <title>Font strecth</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       body {
         height: 100vh;
         width: 100%;
       }
-      .container {
-        background: lightgoldenrodyellow;
-        white-space: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
+      h1 {
+        font-size: 70px;
+        font-weight: 900;
+        font-stretch: 150%;
+        transition: all ease 0.5s;
+        color: red;
       }
-      .child {
-        height: 300px;
-        width: 300px;
-        background-color: crimson;
-        margin: 10px;
-        display: inline-block;
+      h1:hover {
+        font-stretch: 50%;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <h1>hello</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas nam
-      incidunt esse explicabo, ducimus quaerat repudiandae ratione, dolor illum
-      delectus, iste quisquam?
-    </p>
+    <h1>Hello, sohel</h1>
   </body>
 </html>

@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .box {
-        /* background: crimson; */
-        height: 200px;
-        width: 200px;
-        margin: 5px;
-      }
-      #box1 {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #box4 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 50px;
+      border: 2px solid black;
+    }
+
+    @media (max-width:400px) {
+      #box4 {
         background-color: green;
-        z-index: 1;
-        opacity: 0.3;
+        color: white;
+        border: 5px solid red;
+        padding: 50px;
       }
-      #box2 {
-        background-color: red;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        top: 20px;
+    }
+
+    @media (max-width:600px) {
+      #box4 {
+        background: black;
+        color: white;
       }
-    </style>
-  </head>
-  <body>
-    <div class="box" id="box1">box1</div>
-    <div class="box" id="box2">box2</div>
-  </body>
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" id="box4">Flex item4</div>
+  </div>
+</body>
+
 </html>

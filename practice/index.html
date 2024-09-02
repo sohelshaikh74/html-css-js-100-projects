@@ -4,15 +4,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pop up</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      /* display: none; */
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+
+    #close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      background-color: #dc3545;
+      padding: 5px 10px 5px;
+      border-radius: 5px;
+      border-color: #dc3545;
+    }
+
+    #call-button {
+      background: linear-gradient(#000, #100028);
+    }
+
+    #call-button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hello World</h1>
-  <button onclick="demo()">CLICK ME</button>
-  <P>im sohel shaikh define develoepr</P>
-  <input type="text" id="">
-  <script src="app.js"></script>
+  <h1>Pop up</h1>
+  <button id="open-popup">Enquire Now</button>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span id="close-popup">Close</span>
+      <button id="call-button">Thane <a href="tel:+91 8828282171">
+          +91
+          8828282171</a></button>
+      <button id="call-button">Andheri Andheri<a href="tel:+91 7071777789">
+          +91
+          7071777789</a></button>
+    </div>
+  </div>
+  <script>
+    // selecting elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const openButton = document.getElementById('open-popup')
+      const closeButton = document.getElementById('close-popup')
+      const popop = document.getElementById('popup')
+      const callButton = document.getElementById('call-button')
+      const number1 = '+918828282171'
+      const number2 = '+917071777789'
+
+      openButton.addEventListener('click', () => {
+        popup.style.display = "flex"
+      })
+
+      // hide the popup
+      closeButton.addEventListener('click', () => {
+        popup.style.display = 'none'
+      })
+
+      window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+          popop.style.display = 'none'
+        }
+      })
+    })
+  </script>
 </body>
 
 </html>

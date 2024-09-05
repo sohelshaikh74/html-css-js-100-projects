@@ -6,26 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .image-container {
-            height: 250px;
-            width: 250px;
-            border-radius: 50%;
-            padding: 5px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .image-container img {
-            height: 100%;
+        button {
+            border: none;
+            outline: none;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        .content {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 10rem;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        .counter-box {
             width: 100%;
-            border-radius: 50%;
-            border: 2px solid black;
+            height: 160px;
+            background-color: rgba(43, 42, 42, 0.959);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+            font-size: 100px;
+        }
+
+        .button {
+            width: 80%;
+            max-width: 350px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 8px;
+        }
+
+        .increments-btn {
+            margin: 2em 0 1em 0;
+            background-color: blue;
+        }
+
+        .save-btn {
+            background: green;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <div class="image-container">
-        <img src="/images/sohel-without-bg.png" alt="">
-    </div>
+    <main class="content">
+        <div class="counter">
+            <div class="counter-box" id="count">0</div>
+            <button class="increments-btn button">Increment</button>
+            <button class="save-btn button">Save</button>
+        </div>
+        <div class="enteries">
+            <p>Save / Entries</p>
+            <div class="enteries-field">1,2</div>
+        </div>
+    </main>
 </body>
 
 </html>

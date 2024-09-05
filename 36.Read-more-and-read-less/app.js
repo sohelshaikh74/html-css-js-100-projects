@@ -1,6 +1,8 @@
-let containerTwo=document.querySelector('.content-container-2')
-let btn = document.querySelector('.btn')
+let demo = document.querySelector('.continue')
+let btn = document.querySelector('.btn');
+let content2 = document.querySelector('.contnet-2')
 btn.addEventListener('click',()=>{
-    containerTwo.classList.toggle('toggle')
-    // alert(1)
+   content2.classList.toggle('toggle')
+   demo.classList.toggle('toggle')
+
 })

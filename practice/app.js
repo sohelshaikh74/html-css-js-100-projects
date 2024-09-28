@@ -1,11 +1,6 @@
-// how to create promise 
-//  a promise created using promise() consturctor ,which takes two paramters resolve and reject
+// function can be created using function declaration,function expression, arrow function
+function myFun (){}  //function declaration
 
-let myPromise = new Promise((resolve,reject)=>{
-    if(success){
-        resolve('success!')
-    }
-    else{
-        reject('failure')
-    }
-})
+const myFun2 = function(){}   //function expression
+
+const myFun3 = ()=>{ }   // arrow function

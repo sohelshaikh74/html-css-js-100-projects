@@ -1,6 +1,11 @@
-// function can be created using function declaration,function expression, arrow function
-function myFun (){}  //function declaration
+// reverse a string()
+let str ="hello"
+const reverseString = (str)=>{
+    let result  = str.split("").reverse().join("")
+    return result;
+}
+console.log(reverseString(str));
 
-const myFun2 = function(){}   //function expression
-
-const myFun3 = ()=>{ }   // arrow function
+// find the largest number in the array
+let arr = [1,2,3]
+console.log(Math.max(...arr));

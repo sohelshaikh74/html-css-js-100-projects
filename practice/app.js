@@ -8,3 +8,11 @@ const revStr = (str)=>{
    return reversed
 }
 console.log(revStr(str));
+
+
+let str2 = "world"
+const revStr2 = (str2)=>{
+  let result = str2.split("").reverse().join("")
+  return result
+}
+console.log(revStr2(str2));

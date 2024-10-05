@@ -1,14 +1,19 @@
-// // what is rest operator in js
-// const addNum=(a,b,...c)=>{
-//   // console.log(a+b+c);
-//   let result = a+b //33,4
-//   let d = c
-//   // return result
-//   return d
-// }
-// console.log(addNum(1,2,3,4));
+let a = 10;
+let b = a //b=10
+b = 30
+console.log(a);
+console.log(b);
+//10, 30
 
-// this is arrow function introduced in es6. it is simple and easy way to write a function
-let a = 10
-let b =[1,2]
-console.log(a-b);
+let user = {
+  name:"john",
+  age : 33
+}
+
+let john = user
+john.age = 45
+console.log(user);
+console.log(john);
+
+
+

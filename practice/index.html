@@ -9,7 +9,33 @@
 
 <body>
   <h1>Hello</h1>
-  <script src="app.js"></script>
+  <p>Lorem, ipsum dolor.</p>
+  <!-- <script src="app.js"></script> -->
+  <script>
+    // write a function to to return an array with even number
+    let arr = [1, 2, 3, 4, 5, 6, 7]
+    const evenArray = (arr) => {
+      let result = []
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+          result.push(arr[i])
+        }
+      }
+      return result
+    }
+    console.log(evenArray(arr));
+
+    // check wheather a string is palindrom or not
+    let str = "hello"
+    const isPalinrom = (str) => {
+      let result = str.split("").reverse().join("")
+      if (result === str) {
+        return true
+      }
+    }
+    console.log(isPalinrom(str));
+
+  </script>
 </body>
 
 </html>

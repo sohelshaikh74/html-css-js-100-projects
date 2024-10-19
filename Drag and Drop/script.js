@@ -20,7 +20,7 @@ for(let list of lists){
              e.preventDefault()
         })
         leftBox.addEventListener('drop',(e)=>{
-            leftBox.appendChild(selected)
+            rightBox.appendChild(selected)
             selected= null
         })
     })

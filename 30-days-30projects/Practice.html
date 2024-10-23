@@ -77,7 +77,12 @@
 
             let hours = today.getHours();
             let ampm = hours >= 12 ? 'PM' : 'AM';
+            console.log(ampm);
+            console.log(hours);
+
             hours = hours % 12;
+            console.log(hours);
+
             hours = hours ? hours : 12;
 
             hr.innerHTML = (hours < 10 ? "0" : "") + hours;

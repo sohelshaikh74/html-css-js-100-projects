@@ -1,0 +1,61 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;    
+ font-family: sans-serif;
+}
+body{
+    background: #f7edff;
+}
+.buttons{
+    margin: 50px;
+}
+.buttons button{
+    background: #333;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+button:nth-child(1):hover{
+    background-color: greenyellow;
+    color: #333;
+}
+button:nth-child(2):hover{
+  background: tomato;
+}
+button:nth-child(3):hover{
+    background: yellow;
+    color: #333;
+}
+
+#toastBox{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.toast{
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+.toast i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}

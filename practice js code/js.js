@@ -1,40 +1,57 @@
-const tasks = document.querySelectorAll('.task');
-const columns = document.querySelectorAll('.column');
+// function removeDuplicates(arr) {
+//     const uniqueArray = []; // This will store our unique values
 
-// Loop through all task elements and add drag events
-tasks.forEach(task => {
-    task.addEventListener('dragstart', dragStart);
-    task.addEventListener('dragend', dragEnd);
-});
+//     for (let i = 0; i < arr.length; i++) {
+//         let isDuplicate = false; // Flag to check if the number is a duplicate
 
-function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.target.id);
-    setTimeout(() => e.target.style.display = "none", 0); // Make task disappear during the drag
+//         // Check if the current number already exists in the uniqueArray
+//         for (let j = 0; j < uniqueArray.length; j++) {
+//             if (arr[i] === uniqueArray[j]) {
+//                 isDuplicate = true; // Found a duplicate
+//                 break; // No need to check further
+//             }
+//         }
+
+//         // If it's not a duplicate, add it to uniqueArray
+//         if (!isDuplicate) {
+//             uniqueArray.push(arr[i]);
+//         }
+//     }
+
+//     return uniqueArray; // Return the array with duplicates removed
+// }
+
+// // Example usage
+// const numbers = [1, 2, 2, 3, 4, 4, 5];
+// const result = removeDuplicates(numbers);
+// console.log(result); // Output: [1, 2, 3, 4, 5]
+
+// // const arr = [1,2,3,4,4]
+// // const removeDuplicates =(arr)=>{
+// //    const uniqueArray = []
+// //    for(let i=0;i<arr.length;i++){
+// //     let isDuplicate = false;
+
+// //     for(let j=0;j<Uint16Array.length;j++){
+// //         if(arr[i]===uniqueArray[j]){
+// //               isDuplicate=true;
+// //               break
+// //         }
+// //     }
+// //     if(!isDuplicate){
+// //          uniqueArray.push(arr[i])
+// //     }
+// //    }
+// //    return uniqueArray
+// // }
+// // console.log(removeDuplicates(arr));
+
+console.log(Math.random());
+var x = Math.floor(Math.random())
+if(x>0.5){
+  var x =1
 }
-
-function dragEnd(e) {
-    e.target.style.display = "block"; // Make task reappear
+else{
+    var x = 2;
 }
-
-// Loop through all columns to handle drop events
-columns.forEach(column => {
-    column.addEventListener('dragover', dragOver);
-    column.addEventListener('drop', drop);
-});
-
-function dragOver(e) {
-    e.preventDefault(); // Necessary to allow drop
-}
-
-function drop(e) {
-    e.preventDefault();
-    
-    const taskId = e.dataTransfer.getData('text/plain');
-    const task = document.getElementById(taskId);
-
-    // Ensure we drop only into a column and not inside an <h2> or other child elements
-    const target = e.target.classList.contains('column') ? e.target : e.target.closest('.column');
-    if (target) {
-        target.appendChild(task);
-    }
-}
+console.log(x);
